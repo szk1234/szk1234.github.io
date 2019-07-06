@@ -2,19 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>PeterLuxs</title>
+  <title>Blogs and Posts</title>
   <meta name="keywords" content="PeterLuxs, Peter Luxs, PeterLuxs Blog, Peter Luxs Blog, PeterLuxs About, Peter Luxs About"/>
   <meta name="description" content="Blog space of PeterLuxs"/>
   <meta name="author" content="PeterLuxs"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../PL.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+<div class="mobile-container">
+
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="http://peterluxs.com" class="active" ><h1>PeterLuxs</h1></a>
+    <div id="myLinks">
+      <a href="about/aboutMe.html">About Me</a>
+      <a href="blogsPosts/blogsAndPosts.html">Blogs and Posts</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <h2>Blogs and Posts</h2>
+  <div class="blogArea" style="width: 75%">
+    <div class="post" style="height: 22%">
+      <a href="posts/buildAndAura.html">
+      <h3>Gaming/Hardware</h3>
+      <p>Current desktop build specs and Video of Asus Aura RGB Sync</p>
+      <img src="../pictures/desktopBuildPic.png" width="75%" height="100%"></a>
+    </div>
+    <div class="post" style="height: 22%">
+      <a href="posts/hashcat.html">
+        <h3>Password Cracking</h3>
+        <p>Asus RTX 2080 hashcat benchmark results</p>
+        <img src="../pictures/hashcat.png" width="75%" height="100%"></a>
+    </div>
+
+  </div>
 
 
+  <div class="linksfooter" style="padding:16px" align="center">
+    <a href="https://uk.linkedin.com/in/sinan-koc-a49a7b124"><img src="../pictures/linkdin.png" alt="Linkdin" style="width:28px; height: 28px; margin: 2px"></a>
+    <a href="https://twitter.com/PeterLuxs"><img src="../pictures/twitter.png" alt="Twitter" style="width:28px; height: 28px; margin: 2px"></a>
+    <a href="https://www.youtube.com/channel/UCgN2wPFJyk59VGjCTDhw7WA"><img src="../pictures/youtube.png" alt="youTube" style="width:28px; height: 28px; margin: 2px"></a>
+    <a href="mailto:szkoc8@gmail.com"><img src="../pictures/email.png" alt="Email" style="width:28px; height: 28px; margin: 2px"></a>
+    <a href="https://github.com/szk1234"><img src="../pictures/github.png" alt="GitHub" style="width:28px; height: 28px; margin: 2px"></a>
 
+  </div>
+
+</div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
 </body>
 
 </html>
