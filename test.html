@@ -1,0 +1,43 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Processor</title>
+</head>
+<body>
+    <h1>File Processor</h1>
+    <input type="file" id="fileInput">
+    <button onclick="processFile()">Process File</button>
+    <a id="downloadLink" style="display: inline;" href="blob:null/be5dfcd8-6858-42eb-92f9-985d11f63118" download="processed_test.ipack">Download Processed File</a>
+
+    <script>
+        function processFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Please select a file first.");
+                return;
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = function(event) {
+                const fileContent = event.target.result;
+                const processedContent = fileContent.replace(/hello/g, 'welcome');
+
+                const blob = new Blob([processedContent], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+
+                const downloadLink = document.getElementById('downloadLink');
+                downloadLink.href = url;
+                downloadLink.download = 'processed_' + file.name;
+                downloadLink.style.display = 'inline';
+                downloadLink.textContent = 'Download Processed File';
+            };
+
+            reader.readAsText(file);
+        }
+    </script>
+
+
+</body></html>
